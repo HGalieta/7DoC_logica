@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var area = prompt("Qual destas áreas de programação você deseja seguir? Front-End ou Back-End?");
+	var segue = true;
+
+	if (area == "Front-End") {
+		var estudo = prompt("Você deseja aprender React ou Vue?");
+	} if (area == "Back-End") {
+		var estudo = prompt("Você deseja aprender C# ou Java?");
+	}
+
+	if (segue == true) {
+		var carreira = prompt(`Você deseja seguir se especializando como dev ${area}, ou prefere seguir se desenvolvendo para se tornar um/uma dev Fullstack? Responda "Especializar" ou "Fullstack".`)
+	}
+
+	if (carreira == "Especializar") {
+		document.write(`Muito bom, a área ${area} é repleta de oportunidades e você terá muito para aprender. Continue se empenhando em aprender ${estudo} e mantenha o foco em seus estudos para se especializar como dev ${area}.<br><br>`)
+	} if (carreira == "Fullstack") {
+		document.write(`Muito bom, a área ${area} é repleta de oportunidades e você terá muito para aprender. Continue se empenhando em aprender ${estudo} e mantenha o foco em seus estudos para se tornar um dev ${carreira}.<br><br>`)
+	}
+
+	var lista = [];
+	var acrescentar = true;
+    while (acrescentar == true) {
+    	tecnologia = prompt("Você gostaria de aprender mais alguma tecnologia? Digite qual você quer aprender e clique em OK, ou clique em cancelar.");
+    	if (tecnologia == null) {
+    		acrescentar = false;
+    	} else {
+    		document.write(`${tecnologia} é uma ótima escolha. Continue sempre aprendendo e será um/uma profissional muito desejado/desejada no mercado.<br><br>`);
+    		lista.push(tecnologia);
+    	}
+    }
+    
+    document.write("Tecnologias que você deseja aprender:<br><br>");
+    for (i=0; i < lista.length; i++) {
+    	document.write(`${lista[i]}<br>`);
+    }	
+
+</script>
