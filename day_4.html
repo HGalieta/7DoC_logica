@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+
+numeroPensado = parseInt(Math.round(Math.random() * 10));
+
+var contador = 1;
+
+while (contador <= 3) {
+	var chute = parseInt(prompt(`Pensei em um número entre 0 e 10. Digite seu chute para tentar descobrir qual é o número. Tentativa ${contador} de 3.`));
+
+
+	if(chute == numeroPensado) {
+		alert(`Você acertou! O numero que pensei é realmento o ${numeroPensado}.`);
+		break;
+	} else {
+		alert(`Você errou.`);
+		contador++;
+	}
+}
+
+if(chute == numeroPensado) {
+		alert(`Parabéns!`);
+	} else {
+		alert(`O numero que pensei era o ${numeroPensado}.`);
+		contador++;
+	}
+
+</script>
