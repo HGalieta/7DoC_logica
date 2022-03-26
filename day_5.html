@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var frutas = ["Frutas"];
+	var legumes = ["Legumes"];
+	var friosLaticineos = ["Frios e Laticineos",];
+	var bebidas = ["Bebidas",];
+	var congelados = ["Congelados"];
+	var higieneLimpeza =["Higiene e Limpeza"];
+	var acougue = ["Açougue"];
+	var padaria = ["Padaria"];
+	var cereais = ["Cereais"];
+	var mercearia =["Mercearia"];
+
+	function listaCompras(categoria) {
+		document.write(`<br>${categoria[0]}:<br>`);
+		for (i = 1; i < categoria.length; i++) {
+			document.write(`${categoria[i]}<br>`)
+		}
+	}
+
+	var algoMais = "sim";
+	while(algoMais == "sim") {
+		var algoMais = prompt('Você deseja adicionar algum item na sua lisa de compras? Responda "sim" ou "não".');
+
+		if (algoMais == "sim") {
+			var item = prompt("Qual item você deseja adicionar à sua lista?");
+
+			var categoria = prompt('Em qual categoria este item se encaixa? "frutas", "legumes", "frios e laticíneos", "bebidas", "congelados", "higiene e limpeza", "acougue", "padaria", "cereais", ou "mercearia"?' );
+
+			if (categoria == "frutas"){
+				frutas.push(item);
+			} if (categoria == "legumes"){
+				legumes.push(item);
+			} if (categoria == "frios e lacticíneos"){
+				friosLaticineos.push(item);
+			} if (categoria == "bebidas"){
+				bebidas.push(item);
+			} if (categoria == "congelados"){
+				congelados.push(item);
+			} if (categoria == "higiene e limpeza"){
+				higieneLimpeza.push(item);
+			} if (categoria == "acougue"){
+				acougue.push(item);
+			} if (categoria == "padaria"){
+				padaria.push(item);
+			} if (categoria == "cereais"){
+				cereais.push(item);
+			} if (categoria == "mercearia"){
+				mercearia.push(item);
+			}
+
+		} if (algoMais == "não") {
+		listaCompras(frutas);
+		listaCompras(legumes);
+		listaCompras(friosLaticineos);
+		listaCompras(bebidas);
+		listaCompras(congelados);
+		listaCompras(higieneLimpeza);
+		listaCompras(acougue);
+		listaCompras(padaria);
+		listaCompras(cereais);
+		listaCompras(mercearia);
+		break;
+		} else {
+			algomais = "sim";
+		}
+	}
+	
+
+</script>
