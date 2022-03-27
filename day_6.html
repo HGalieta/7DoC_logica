@@ -1,0 +1,229 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var frutas = ["Frutas"];
+	var legumes = ["Legumes"];
+	var friosLaticineos = ["Frios e Laticineos",];
+	var bebidas = ["Bebidas",];
+	var congelados = ["Congelados"];
+	var higieneLimpeza =["Higiene e Limpeza"];
+	var acougue = ["Açougue"];
+	var padaria = ["Padaria"];
+	var cereais = ["Cereais"];
+	var mercearia =["Mercearia"];
+
+	function listaCompras(categoria) {
+		document.write(`<br>${categoria[0]}:<br>`);
+		for (i = 1; i < categoria.length; i++) {
+			document.write(`${categoria[i]}<br>`)
+		}
+	}
+
+	function adiciona() {
+
+		var item = prompt("Qual item você deseja adicionar à sua lista?");
+
+		var categoria = prompt('Em qual categoria este item se encaixa? "frutas", "legumes", "frios e laticíneos", "bebidas", "congelados", "higiene e limpeza", "acougue", "padaria", "cereais", ou "mercearia"?' );
+
+		if (categoria == "frutas"){
+
+			frutas.push(item);
+			algoMais = "sim";
+		} if (categoria == "legumes"){
+
+			legumes.push(item);
+			algoMais = "sim";
+		} if (categoria == "frios e lacticíneos"){
+
+			friosLaticineos.push(item);
+			algoMais = "sim";
+		} if (categoria == "bebidas"){
+
+			bebidas.push(item);
+			algoMais = "sim";
+		} if (categoria == "congelados"){
+
+			congelados.push(item);
+			algoMais = "sim";
+		} if (categoria == "higiene e limpeza"){
+
+			higieneLimpeza.push(item);
+			algoMais = "sim";
+		} if (categoria == "acougue"){
+
+			acougue.push(item);
+			algoMais = "sim";
+		} if (categoria == "padaria"){
+
+			padaria.push(item);
+			algoMais = "sim";
+		} if (categoria == "cereais"){
+
+			cereais.push(item);
+			algoMais = "sim";
+		} if (categoria == "mercearia"){
+
+			mercearia.push(item);
+			algoMais = "sim";
+		}
+	}
+
+	function retira() {
+
+		var retiraCategoria = prompt('De qual categoria você deseja retirar um item? "frutas", "legumes", "frios e laticíneos", "bebidas", "congelados", "higiene e limpeza", "acougue", "padaria", "cereais", ou "mercearia"?')
+		var retiraItem = prompt('Qual item você deseja retirar?')
+
+		if (retiraCategoria == "frutas"){
+
+			var posicao = frutas.indexOf(retiraItem);
+
+			if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					frutas.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${frutas[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "legumes"){
+
+				var posicao = legumes.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					legumes.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${legumes[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "frios e lacticíneos"){
+
+				var posicao = friosLaticineos.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					friosLaticineos.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${friosLaticineos[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "bebidas"){
+				
+				var posicao = bebidas.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					bebidas.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${bebidas[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "congelados"){
+				
+				var posicao = congelados.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					congelados.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${congelados[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "higiene e limpeza"){
+				
+				var posicao = higieneLimpeza.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					higieneLimpeza.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${higieneLimpeza[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "acougue"){
+				
+				var posicao = acougue.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					acougue.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${acougue[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "padaria"){
+				
+				var posicao = padaria.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					padaria.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${padaria[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "cereais"){
+				
+				var posicao = cereais.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					cereais.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${cereais[0]}`)
+				}
+				algoMais = "sim";
+			} if (retiraCategoria == "mercearia"){
+				
+				var posicao = mercearia.indexOf(retiraItem);
+
+				if (posicao === `${retiraItem} is not defined`) {
+					alert("Este item não foi encontrado.");
+				} else {
+					mercearia.splice(posicao, 1);
+					alert(`${retiraItem} foi retirado da lista ${mercearia[0]}`)
+				}
+				algoMais = "sim";
+			}
+	}
+
+	var algoMais = "sim";
+	while(algoMais == "sim") {
+
+		if (frutas.length == 1 && legumes.length == 1 && friosLaticineos.length == 1 && bebidas.length == 1 && congelados.length == 1 && higieneLimpeza.length == 1 && acougue.length == 1 && padaria.length == 1 && cereais.length == 1 && mercearia.length == 1) {
+			
+			var algoMais = prompt('Você deseja adicionar algum item na sua lista de compras? Responda "sim" ou "não".');
+		} else {
+			
+			var algoMais = prompt('Você deseja adicionar um item à lista, retirar um item da lista, ou quer concluir a sua lista de compras? Responda "adicionar", "retirar" ou "concluir".')
+		}
+
+		if (algoMais == "sim" || algoMais == "adicionar") {
+			
+			adiciona();
+		}
+
+		if (algoMais == "retirar") {
+			
+			retira();
+		}
+
+		if (algoMais == "não" || algoMais == "concluir") {
+		listaCompras(frutas);
+		listaCompras(legumes);
+		listaCompras(friosLaticineos);
+		listaCompras(bebidas);
+		listaCompras(congelados);
+		listaCompras(higieneLimpeza);
+		listaCompras(acougue);
+		listaCompras(padaria);
+		listaCompras(cereais);
+		listaCompras(mercearia);
+		break;
+		} else {
+			algoMais = "sim";
+		}
+	}
+	
+
+</script>
