@@ -1,0 +1,90 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var input = `
+	<div>
+	<label>Qual operação você deseja realizar?</label><br>
+	<input type="radio" name="operacao" value="soma"> Soma </input><br>
+	<input type="radio" name="operacao" value="subtrai"> Subtração </input><br>
+	<input type="radio" name="operacao" value="multiplica"> Multiplicação </input><br>
+	<input type="radio" name="operacao" value="divide"> Divisão </input><br>
+	</div>
+	`;
+	document.write(input);
+	document.write(`<button onClick="inicia()" id="button">Iniciar calculo</button>`);
+	var operacao = document.getElementsByName("operacao");
+
+
+	function inicia() {
+		var operacao = document.getElementsByName("operacao");
+
+		var escolha = true;
+		for(var i = 0; i < operacao.length; i++) {
+			if (operacao[i].checked) {
+				var operacaoEscolhida = operacao[i].value;
+				escolha = false;
+			}
+		}
+
+		if (escolha) {
+			alert("Você deve escolher uma operação.")
+		}
+		if(operacaoEscolhida == "soma") {
+			soma();
+		}
+		if(operacaoEscolhida == "subtrai") {
+			subtrai();
+		}
+		if(operacaoEscolhida == "multiplica") {
+			multiplica();
+		}
+		if(operacaoEscolhida == "divide") {
+			divide();
+		}
+
+	}
+
+	function soma() {
+
+		var numero1 = parseFloat(prompt("Digite o primeiro número da soma."))
+		var numero2 = parseFloat(prompt("Qual número você deseja somar ao primeiro?"))
+
+		var resultado = numero1 + numero2;
+
+		document.write(`<br>O resultado da soma de ${numero1} com ${numero2} é ${resultado}.`)
+
+	}
+
+	function subtrai() {
+
+		var numero1 = parseFloat(prompt("Digite o primeiro número da subtração."))
+		var numero2 = parseFloat(prompt("Qual número você deseja subtrair do anterior?"))
+
+		var resultado = numero1 - numero2;
+
+		document.write(`<br>O resultado da subtração de ${numero1} por ${numero2} é ${resultado}.`)
+	}
+
+	function multiplica() {
+
+		var numero1 = parseFloat(prompt("Digite o primeiro número da multiplicação."))
+		var numero2 = parseFloat(prompt("Por qual número você deseja multiplicar o primeiro?"))
+
+		var resultado = numero1 * numero2;
+
+		document.write(`<br>O resultado da multiplicação entre ${numero1} e ${numero2} é ${resultado}.`)
+	}
+
+	function divide() {
+
+		var numero1 = parseFloat(prompt("Digite o primeiro número da divisão."))
+		var numero2 = parseFloat(prompt("Por qual número você deseja dividir o anterior?"))
+
+		var resultado = numero1 / numero2;
+
+		document.write(`<br>O resultado da divisão de ${numero1} por ${numero2} é ${resultado}.`)
+	}
+
+
+</script>
